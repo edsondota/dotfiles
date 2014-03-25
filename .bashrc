@@ -113,9 +113,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
+PROMPT_COMMAND='CurDir=`pwd|sed -e "s!$HOME!~!"|sed -re "s!([^/])[^/]+/!\1/!g"`'
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
-export PS1="\[\033[38m\]\u\[\033[32m\] \W \[\033[31m\]\`git \\
+export PS1="\[\033[38m\]\u@\h\[\033[32m\] \$CurDir \[\033[31m\]\`git \\
 branch 2>/dev/null | grep \"^\*\" | \\
 sed -r \"s/\*\ (.*)/ \(\1\)/\"\`\[\033[37m\]$\[\033[00m\] "
 
