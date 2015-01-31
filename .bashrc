@@ -121,3 +121,5 @@ branch 2>/dev/null | grep \"^\*\" | \\
 sed -r \"s/\*\ (.*)/ \(\1\)/\"\`\[\033[37m\]$\[\033[00m\] "
 
 export PATH=$PATH:/home/edson/play
+
+alias winreboot='sudo grub-reboot 4 && sudo shutdown -r now'
