@@ -65,3 +65,15 @@ function! Tab_Or_Complete()
 endfunction
 :inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 :set dictionary="/usr/dict/words"
+
+call vundle#begin()
+
+Plugin 'kien/ctrlp'
+Plugin 'othree/html5.vim'
+Plugin 'Townk/vim-autoclose'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'mattn/emmet-vim'
+
+class vundle#end()
