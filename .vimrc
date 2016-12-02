@@ -1,3 +1,21 @@
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'othree/html5.vim'
+Plugin 'Townk/vim-autoclose'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'mattn/emmet-vim'
+
+call vundle#end()
+
+filetype plugin indent on
+
 map <Tab> :tabnext<CR>
 map <S-Tab> :tabpreviou<CR>
 
@@ -33,16 +51,15 @@ if has("autocmd")
    filetype plugin on
 endif
 autocmd VimEnter,BufNewFile,BufReadPost *.html set ft=htmldjango
-execute pathogen#infect()
-"set cursorline
-"set cursorcolumn
+set cursorline
+set cursorcolumn
 
 "Solirized theme configuration
 syntax enable
 syntax on
 set t_Co=16
 let g:solarized_termcolors=256
-set background=dark
+set background=light
 colorscheme solarized
 
 set completeopt=longest,menuone
@@ -66,14 +83,3 @@ endfunction
 :inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 :set dictionary="/usr/dict/words"
 
-call vundle#begin()
-
-Plugin 'kien/ctrlp'
-Plugin 'othree/html5.vim'
-Plugin 'Townk/vim-autoclose'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'mattn/emmet-vim'
-
-class vundle#end()
