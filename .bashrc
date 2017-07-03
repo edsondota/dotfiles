@@ -120,6 +120,4 @@ export PS1="\[\033[38m\]\u@\h\[\033[32m\] \$CurDir \[\033[31m\]\`git \\
 branch 2>/dev/null | grep \"^\*\" | \\
 sed -r \"s/\*\ (.*)/ \(\1\)/\"\`\[\033[37m\]$\[\033[00m\] "
 
-export PATH=$PATH:/home/edson/play
-
 alias winreboot='sudo grub-reboot 4 && sudo shutdown -r now'
