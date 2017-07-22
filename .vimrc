@@ -11,6 +11,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'mattn/emmet-vim'
+Plugin 'dkprice/vim-easygrep'
 
 call vundle#end()
 
@@ -18,6 +19,10 @@ filetype plugin indent on
 
 map <Tab> :tabnext<CR>
 map <S-Tab> :tabpreviou<CR>
+
+"colocar temp files do vim no /tmp
+set swapfile
+set dir=/tmp
 
 "tamanho da identação
 set shiftwidth=4
