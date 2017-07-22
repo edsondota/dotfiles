@@ -121,3 +121,8 @@ branch 2>/dev/null | grep \"^\*\" | \\
 sed -r \"s/\*\ (.*)/ \(\1\)/\"\`\[\033[37m\]$\[\033[00m\] "
 
 alias winreboot='sudo grub-reboot 4 && sudo shutdown -r now'
+alias xclip='xclip -selection clipboard'
+alias gitlog="git log --all --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+
+export ANDROID_HOME=$HOME/android/
+export PATH=$HOME/android/tools:$PATH
