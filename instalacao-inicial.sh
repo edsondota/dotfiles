@@ -20,3 +20,7 @@ sudo apt-get install python-dev python-pip
 
 # mysql
 sudo apt-get install mysql-server mysql-client mysql-workbench
+
+# pacotes essenciais para desenvolvimento
+sudo apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev
+
